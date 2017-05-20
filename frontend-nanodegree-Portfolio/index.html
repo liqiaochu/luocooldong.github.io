@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Udacity Responsive Images course project" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Puppy Portfolio: Picture Story</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
+    <link rel="icon" href="images/nd001-image.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 页面的头部 -->
+        <header>
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="title-logo img-responsive" src="images/udacity-logo.png" alt="response image">
+                </div>
+                <div class="col-md-6 text-right text-uppercase">
+                    <h1 class="title-super text-thin">YuDong  Geng</h1>
+                    <h3>Front-end Ninja</h3>
+                </div>
+            </div>
+        </header>
+
+        <hr>
+
+        <!-- 页面的主体部分 -->
+        <main class="row">
+            <div class="col-md-12">
+                <picture id="banner">
+                    <img src="images/maxresdefault.jpg" class="img-responsive" alt="Main puppy image">
+                </picture>
+            </div>
+        </main>
+
+        <h2 class="text-muted">Featured Work</h2>
+
+        <!-- 文章的段落 -->
+        <section class="row">
+            <article class="featured-work  text-center col-md-4">
+                <img src="images/puppy2.jpg" class="img-responsive image" alt="response image" data-toggle="modal" data-target="#project1">
+                <section>
+                    <h3 class="text-uppercase">Appify</h3>
+                    <p><a href="http://github.com/">http://github.com/udacity/Appify</a></p>
+                </section>
+            </article>
+
+            <article class="featured-work text-center col-md-4">
+                <img src="images/puppy3.jpg" class="img-responsive image" alt="response image" data-toggle="modal" data-target="#project2">
+                <section>
+                    <h3 class="text-uppercase">Sunflower</h3>
+                    <p><a href="http://github.com/">http://github.com/udacity/Sunflower</a></p>
+                </section>
+            </article>
+
+            <artilce class="featured-work text-center col-md-4">
+                <img src="images/puppy4.jpg" class="img-responsive image" alt="response image" data-toggle="modal" data-target="#project3">
+                <section>
+                    <h3 class="text-uppercase">Boken</h3>
+                    <p><a href="http://github.com/">http://github.com/udacity/Bokeh</a></p>
+                </section>
+            </artilce>
+        </section>
+
+        <footer>
+
+            <div id="social">
+                <a href="https://twitter.com/home?status=https://github.com/udacity/responsive-images" class="zocial-twitter">Twitter</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/udacity/responsive-images" class="zocial-facebook">Facebook</a>
+                <a href="https://plus.google.com/share?url=https://github.com/udacity/responsive-images" class="zocial-googleplus">Google+</a>
+                <a href="http://digg.com/submit?phase=2&url=https%3A%2F%2Fgithub.com%2Fudacity%2Fresponsive-images&title=Udacity%20nano%20course%3A%20Responsive%20Images&bodytext=Responsive%20images%20for%20your%20sites%20and%20web%20apps&topic=tech_news" class="zocial-digg">Digg</a>
+            </div>
+
+            <a href="//github.com/udacity/responsive-images/tree/master/project/final" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+        </footer>
+    </div>
+
+    <!-- Modal  1 -->
+    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel1">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/puppy2.jpg" alt="response image"> This was my first project in this class. I learned a lot about HTML and CSS. The portfolio page looks nice ,but there really isn't that much info about your projects. Google is my love . kill my idea.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  2 -->
+    <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel2">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/puppy3.jpg" alt="response image"> This was my first project in this class. I learned a lot about HTML and CSS. The portfolio page looks nice ,but there really isn't that much info about your projects. Google is my love . kill my idea.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  3 -->
+    <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel3">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/puppy4.jpg" alt="response image"> This was my first project in this class. I learned a lot about HTML and CSS. The portfolio page looks nice ,but there really isn't that much info about your projects. Google is my love . kill my idea.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

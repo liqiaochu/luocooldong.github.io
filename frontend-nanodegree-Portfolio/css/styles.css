@@ -1,0 +1,63 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #676858;
+    font-weight: 300;
+}
+
+.text-muted {
+    color: #bcbbbb;
+}
+
+.text-thin {
+    font-weight: 100;
+}
+
+.title-super {
+    font-size: 60px;
+}
+
+.title-logo {
+    margin-top: 20px;
+}
+
+.image {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 3vh 0 3vh 0;
+}
+
+div#social {
+    line-height: 2em;
+}
+
+div#social a {
+    margin: 0 1em 0 0;
+}
+
+div#social a:last-of-type {
+    margin: 0;
+}
+
+[class*="zocial-"]:before {
+    color: black;
+    display: inline-block;
+    font-family: 'zocial', sans-serif;
+    text-shadow: 3px 3px 3px #aaa;
+    width: 2em;
+}
+
+a:hover [class*="zocial-"]:before {
+    color: #3d85c6;
+}
+
+a#viewSource {
+    border-top: 1px solid #ddd;
+    display: block;
+    margin: 1.3em 0 0 0;
+    padding: 1em 0 0 0;
+}
