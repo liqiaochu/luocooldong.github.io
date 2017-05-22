@@ -18,7 +18,7 @@ var bio = {
 	},
     "welcomeMessage": "I'm currently working as a Web Developer in ZhongGuangCun.",
     "skills": ["Html", "Css", "JavaScript", "jQuery", "Bootstrap", "AngularJS", "Web Development"],
-	"bioPic": "images/dong.jpg",
+	"bioPic": "../frontend-nanodegree-Interactive-Resume/images/dong.jpg",
 	"display": function(){
 		var formattedName = HTMLheaderName.replace("%data%", this.name);
         var formattedRole = HTMLheaderRole.replace("%data%", this.role);
@@ -196,27 +196,27 @@ var projects = {
 		"dates": "January 2017",
 		"description": "Practice HTML syntax by converting a mockup of a blog article into a real website as part of Udacity's Front-End Web Developer " +
 			"Nanodegree.",
-		"images": ["images/mockup-to-article.png"],
+		"images": ["../frontend-nanodegree-Interactive-Resume/images/mockup-to-article.png"],
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	}, {
 		"title": "Animal Trading Cards",
 		"dates": "February 2017",
 		"description": "Use CSS to convert a design prototype into a functional webpage  as part of Udacity's Front-End Web Developer " +
 			"Nanodegree.",
-		"images": ["images/animal-trading-cards.png"],
+		"images": ["../frontend-nanodegree-Interactive-Resume/images/animal-trading-cards.png"],
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	},{
 		"title": "Build a Portfolio Site",
 		"dates": "February 2017",
 		"description": "develop a responsive website that will display images, descriptions and links to each of the portfolio projects you will "+
 		 "complete throughout the course of the Front-End Web Developer Nanodegree.",
-		"images": ["images/portfolio.png"],
+		"images": ["../frontend-nanodegree-Interactive-Resume/images/portfolio.png"],
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	},{
 		"title": "Build a ConFusion Site",
 		"dates": "June 2014 - August 2014",
 		"description": "Created a ConFusion Site in the Coursera",
-		"images": ["images/conFusion.png"],
+		"images": ["../frontend-nanodegree-Interactive-Resume/images/conFusion.png"],
 		"url": "https://www.coursera.org/learn/angular-js"
 	}],
 	"display": function() {
