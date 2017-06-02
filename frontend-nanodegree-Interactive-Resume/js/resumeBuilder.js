@@ -9,7 +9,7 @@ This is empty on purpose! Your code to build the resume will go here.
 /*个人信息*/
 var bio = {
 	"name": "耿玉东",
-	"role": "前端工程师",
+	"role": "前端开发工程师",
 	"contacts": {
         "mobile": 18514000891,
 		"email": "gengyudonga@gmail.com",
