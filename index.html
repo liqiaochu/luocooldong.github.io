@@ -8,8 +8,6 @@
 
   <link href="frontend-nanodegree-Interactive-Resume/css/style.css" rel="stylesheet">
 
-  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDEKazkQN7EfEsBJhk6RU_FyhGrRIrIxR4"></script>
-    
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
@@ -18,49 +16,43 @@
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
     </div>
+    
+    <div id="education" class="gray">
+      <h2>教育经历</h2>
+    </div>
+    
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+      <h2>工作经历</h2>
     </div>
+    
     <div id="projects">
-      <h2>Projects</h2>
+      <h2>项目经历</h2>
     </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-      
+    
     <div id="skillsChart">
-      <h2>Skills Chart</h2>
+      <h2>技能图谱</h2>
       <div id="container" style="min-width: 310px; height: 400px; max-width: 1200px; margin: 0 auto"></div>
     </div>
       
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+      <h2 class="orange center-text">联系方式</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
   </div>
    
+  <!-- jQeury函数库操作DOM和Ajax请求-->
   <script src="frontend-nanodegree-Interactive-Resume/js/jQuery.js"></script>
 
-  <!-- More on helper.js in the class -->
+  <!-- 帮助工具类 -->
   <script src="frontend-nanodegree-Interactive-Resume/js/helper.js"></script>
     
-    
-  <!--添加D3Js图形库-->
+  <!-- 添加D3Js图形库-->
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <script src="http://code.highcharts.com/modules/exporting.js"></script>  
   
-  
-  
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
+  <!-- 存贮网站需要的各种信息 -->
   <script src="frontend-nanodegree-Interactive-Resume/js/resumeBuilder.js"></script>
 
 
@@ -90,9 +82,6 @@
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';
     }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none'; 
-	}
   </script>
 </body>
 </html>

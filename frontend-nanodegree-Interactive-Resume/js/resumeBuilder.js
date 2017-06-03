@@ -1,9 +1,3 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
-
-/*$("#main").append("YuDong Geng");*/
-
 'use strict';  //开启严格模式
 
 /*个人信息*/
@@ -14,10 +8,12 @@ var bio = {
         "mobile": 18514000891,
 		"email": "gengyudonga@gmail.com",
 		"github": "luocooldong",
-		"location": "BeiJing, ChangPing, China"
+		"bornYear":"1989-06",
+		"locationOrigin": "河南周口",
+		"location": "北京"
 	},
-    "welcomeMessage": "I'm currently working as a Web Developer in ZhongGuangCun.",
-    "skills": ["Html", "Css", "JavaScript", "jQuery", "Bootstrap", "AngularJS", "Web Development"],
+    "welcomeMessage": "学而不思则罔，思而不学则怠",
+    "skills": ["Html", "Css", "JavaScript", "jQuery", "Bootstrap", "AngularJS", "Backbrone.js", "KnockoutJs", "Ajax", "Grunt"],
 	"bioPic": "../frontend-nanodegree-Interactive-Resume/images/dong.jpg",
 	"display": function(){
 		var formattedName = HTMLheaderName.replace("%data%", this.name);
@@ -34,6 +30,8 @@ var bio = {
         formattedContactInfo.push(HTMLmobile.replace("%data%", this.contacts.mobile));
         formattedContactInfo.push(HTMLemail.replace("%data%", this.contacts.email));
         formattedContactInfo.push(HTMLgithub.replace("%data%", this.contacts.github));
+		formattedContactInfo.push(HTMLBornYear.replace("%data%", this.contacts.bornYear));
+		formattedContactInfo.push(HTMLlocationOrigin.replace("%data%", this.contacts.locationOrigin));
         formattedContactInfo.push(HTMLlocation.replace("%data%", this.contacts.location));
 
 		formattedContactInfo.forEach(function(eachFormattedContactInfo){
@@ -41,10 +39,9 @@ var bio = {
 			$("#footerContacts").append(eachFormattedContactInfo);
 		});
 
-		/*skill*/
+		/*技能*/
 		if(this.skills.length > 0) {
 			$("#header").append(HTMLskillsStart);
-		    
 		    this.skills.forEach(function(skill){
 		        $("#skills").append(HTMLskills.replace("%data%", skill));
 		    });
@@ -58,44 +55,64 @@ bio.display();
 /*教育背景*/
 var education = {
 	"schools": [
-		{   "name": "University of ZhengZhou",
-			"location": "ZhengZhou, HeNan, China",
-			"degree": "Undergraduate First",
-			"majors": "Computer Science and Technology",
+		{   "name": "郑州大学",
+			"degree": "本科",
+			"majors": "计算机科学与技术专业",
 			"dates": "2011 - 2016",
+		    "location": "郑州，河南",
 			"url": "http://www.zzu.edu.cn/"
 		}		
 	],
 	"onlineCourses": [
-	    {   "title": "Intro to HTML and CSS",
-			"school": "Udacity",
-			"dates": "February 2017",
+		{   "title": "Git/GitHub版本控制和协作开发",
+			"school": "优达学城",
+			"dates": "February 2016",
 			"url": "https://www.udacity.com/course/ud304"
 		},
-		{   "title": "Javascript Basics",
-			"school": "Udacity",
-			"dates": "February 2017",
-			"url": "https://www.udacity.com/course/ud804"
+	    {   "title": "HTML5 Canvas和CSS布局，动画",
+			"school": "优达学城",
+			"dates": "February 2016",
+			"url": "https://www.udacity.com/course/ud304"
 		},
-		{   "title": "Object-Oriented Javascript",
-			"school": "Udacity",
+		{   "title": "面向对象的Javascript编程",
+			"school": "优达学城",
 			"dates": "February 2017",
 			"url": "https://www.udacity.com/course/ud015"
 		},
-		{   "title": "HTML5 Canvas",
-			"school": "Udacity",
+		{   "title": "jQuery库和Ajax使用",
+			"school": "优达学城",
+			"dates": "February 2017",
+			"url": "https://www.udacity.com/course/ud015"
+		},
+		{   "title": "响应式网站设计和响应式图片",
+			"school": "优达学城",
 			"dates": "March 2017",
 			"url": "https://www.udacity.com/course/ud292"
 		},
-		{   "title": "AngulrJS",
+		{   "title": "网站性能优化和关键渲染路径",
+			"school": "优达学城",
+			"dates": "March 2017",
+			"url": "https://www.udacity.com/course/ud292"
+		},
+		{   "title": "浏览器渲染优化以及如何使用Chrome的Timeline进行卡顿检测和优化",
+			"school": "优达学城",
+			"dates": "March 2017",
+			"url": "https://www.udacity.com/course/ud292"
+		},
+		{   "title": "JavaScript设计模式,MVC,MVVM,MVP,MV*,框架组织库",
+			"school": "优达学城",
+			"dates": "March 2017",
+			"url": "https://www.udacity.com/course/ud292"
+		},
+		{   "title": "JavaScript测试Jasmine",
+			"school": "优达学城",
+			"dates": "March 2017",
+			"url": "https://www.udacity.com/course/ud292"
+		},
+		{   "title": "网站工具和自动化,npm,Bower,Grunt,Gulp,Json-server,Jasmine,Yeoman",
 			"school": "Coursera",
 			"dates": "April 2017",
 			"url": "https://www.coursera.org/learn/angular-js"
-		},
-		{   "title": "Web Development",
-			"school": "Udacity",
-			"dates": "April 2017",
-			"url": "https://www.udacity.com/course/cs253"
 		}
 	],
 	"display": function() {
@@ -115,9 +132,6 @@ var education = {
                                             formattedSchoolLocation,
                                             formattedSchoolDates,
                                             formattedSchoolMajor);
-				/*$(".education-entry:last").append(formattedSchoolLocation);
-				$(".education-entry:last").append(formattedSchoolDates);
-				$(".education-entry:last").append(formattedSchoolMajor);*/
 			});
 		}
 	
@@ -128,13 +142,7 @@ var education = {
 				var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title).replace("#", onlineCourse.url);
 				var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
 				var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
-				var formattedOnlineURL = HTMLonlineURL.replace("%data%", onlineCourse.url).replace("#", onlineCourse.url);
-
-				$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool, 
-                                            formattedOnlineDates,
-                                            formattedOnlineURL);
-				/*$(".education-entry:last").append(formattedOnlineDates);
-				$(".education-entry:last").append(formattedOnlineURL);*/
+				$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
 			});
 		}
 	}
@@ -177,10 +185,6 @@ var work = {
                                        formattedWorkLocation,
                                        formattedWorkDates,
                                        formattedWorkDescription);
-                /*append可以一次添加多个参数*/
-				/*$(".work-entry:last").append(formattedWorkLocation);
-				$(".work-entry:last").append(formattedWorkDates);
-				$(".work-entry:last").append(formattedWorkDescription);*/
 			});
 		}
 	}
@@ -192,32 +196,29 @@ work.display();
 /*项目经验*/
 var projects = {
 	"projects": [{
-		"title": "Mockup to Article",
-		"dates": "January 2017",
-		"description": "Practice HTML syntax by converting a mockup of a blog article into a real website as part of Udacity's Front-End Web Developer " +
-			"Nanodegree.",
-		"images": ["../frontend-nanodegree-Interactive-Resume/images/mockup-to-article.png"],
-		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-	}, {
-		"title": "Animal Trading Cards",
-		"dates": "February 2017",
-		"description": "Use CSS to convert a design prototype into a functional webpage  as part of Udacity's Front-End Web Developer " +
-			"Nanodegree.",
-		"images": ["../frontend-nanodegree-Interactive-Resume/images/animal-trading-cards.png"],
-		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-	},{
-		"title": "Build a Portfolio Site",
-		"dates": "February 2017",
-		"description": "develop a responsive website that will display images, descriptions and links to each of the portfolio projects you will "+
-		 "complete throughout the course of the Front-End Web Developer Nanodegree.",
+		"title": "个人作品集网站",
+		"dates": "2 2017",
+		"description": "开发了一个响应式网站，可以展示每一个宠物的图片，描述，以及链接。",
 		"images": ["../frontend-nanodegree-Interactive-Resume/images/portfolio.png"],
-		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		"url": "https://luocooldong.github.io/frontend-nanodegree-Portfolio/"
 	},{
-		"title": "Build a ConFusion Site",
-		"dates": "June 2014 - August 2014",
-		"description": "Created a ConFusion Site in the Coursera",
-		"images": ["../frontend-nanodegree-Interactive-Resume/images/conFusion.png"],
+		"title": "大众点评网站",
+		"dates": "1 2016",
+		"description": "大众点评网站",
+		"images": ["../frontend-nanodegree-Interactive-Resume/images/dainping.png"],
 		"url": "https://www.coursera.org/learn/angular-js"
+	},{
+		"title": "待办事项",
+		"dates": "4 2017",
+		"description": "待办事项是一个用BackboneJs开发的计划事项。",
+		"images": ["../frontend-nanodegree-Interactive-Resume/images/daibanshixiang.png"],
+		"url": "https://www.coursera.org/learn/angular-js"
+	},{
+		"title": "青蛙过河项目克隆",
+		"dates": "3 2017",
+		"description": "青蛙过河项目克隆。",
+		"images": ["../frontend-nanodegree-Interactive-Resume/images/frogger.png"],
+		"url": "https://luocooldong.github.io/frontend-nanodegree-Arcade-Game-Clone/"
 	}],
 	"display": function() {
 		if (projects.projects.length > 0) {
@@ -263,8 +264,6 @@ function inName(name) {
 }
 
 $("#main").append(internationalizeButton);
-
-
 
 
 /*技能图谱*/
@@ -394,9 +393,6 @@ $(function () {
     $("#container").highcharts(myChartData);
 });
  
-
-/*添加地图*/
-$("#mapDiv").append(googleMap);
 
 
 

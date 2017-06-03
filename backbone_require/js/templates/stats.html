@@ -1,0 +1,16 @@
+<span id="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? '项' : '项' %> 剩余</span>
+<!--底层功能栏-->
+<ul id="filters">
+	<li>
+		<a class="selected" href="#/">所有任务</a>
+	</li>
+	<li>
+		<a href="#/active">激活任务</a>
+	</li>
+	<li>
+		<a href="#/completed">已经完成</a>
+	</li>
+</ul>
+<% if ( completed ) { %>
+<button id="clear-completed">清除已经完成任务</button>
+<% } %>
