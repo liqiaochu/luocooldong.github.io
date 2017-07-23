@@ -156,6 +156,7 @@ var work = {
 			"location": "BeiJing, ZhongGuangCun, China",
 			"dates": "January 2016 - Present",
 			"description": ""
+		}
 	],
 	"display": function() {
 		if (this.jobs.length > 0) {
