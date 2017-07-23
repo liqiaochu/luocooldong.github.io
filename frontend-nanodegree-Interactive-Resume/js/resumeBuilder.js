@@ -36,7 +36,6 @@ var bio = {
 
 		formattedContactInfo.forEach(function(eachFormattedContactInfo){
 		    $("#topContacts").append(eachFormattedContactInfo);
-			$("#footerContacts").append(eachFormattedContactInfo);
 		});
 
 		/*技能*/
