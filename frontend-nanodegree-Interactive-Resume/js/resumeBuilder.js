@@ -147,7 +147,6 @@ var education = {
 
 education.display();
 
-
 /*工作经历*/
 var work = {
 	"jobs": [
@@ -156,15 +155,7 @@ var work = {
 			"title": "Software Developer",
 			"location": "BeiJing, ZhongGuangCun, China",
 			"dates": "January 2016 - Present",
-			"description": "I was specifically hired to help deliver the new online FireWall  system for HuaWei Company.In this time, I studied the HTMl, CSS, JS."
-		},
-		{
-			"employer": "XingZhiHuiYuan Company",
-			"title": "School Trainee",
-			"location": "XiAn, ShanXi, China",
-			"dates": "April 2015 - May 2015",
-			"description": "I developed the Personsal Blog System with the other Group-Student in Practice"
-		}
+			"description": ""
 	],
 	"display": function() {
 		if (this.jobs.length > 0) {
@@ -175,7 +166,6 @@ var work = {
 				var formattedWorkLocation = HTMLworkLocation.replace("%data%", job.location);
 				var formattedWorkDates = HTMLworkDates.replace("%data%", job.dates);
 				var formattedWorkDescription = HTMLworkDescription.replace("%data%", job.description);
-
 				var formattedEmployerWorkTitle = formattedEmployer + formattedWorkTitle;
 
 				$(".work-entry:last").append(formattedEmployerWorkTitle,
