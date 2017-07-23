@@ -189,18 +189,6 @@ var projects = {
 		"description": "开发了一个响应式网站，可以展示每一个宠物的图片，描述，以及链接。",
 		"images": ["../frontend-nanodegree-Interactive-Resume/images/portfolio.png"],
 		"url": "https://luocooldong.github.io/frontend-nanodegree-Portfolio/"
-	},{
-		"title": "大众点评网站",
-		"dates": "1 2016",
-		"description": "大众点评网站",
-		"images": ["../frontend-nanodegree-Interactive-Resume/images/dainping.png"],
-		"url": "https://www.coursera.org/learn/angular-js"
-	},{
-		"title": "青蛙过河项目克隆",
-		"dates": "3 2017",
-		"description": "青蛙过河项目克隆。",
-		"images": ["../frontend-nanodegree-Interactive-Resume/images/frogger.png"],
-		"url": "https://luocooldong.github.io/frontend-nanodegree-Arcade-Game-Clone/"
 	}],
 	"display": function() {
 		if (projects.projects.length > 0) {
