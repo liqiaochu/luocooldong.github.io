@@ -1,4 +1,4 @@
-'use strict';  //开启严格模式
+'use strict'; 
 
 /*个人信息*/
 var bio = {
