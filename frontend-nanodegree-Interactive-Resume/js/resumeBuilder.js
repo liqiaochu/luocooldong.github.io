@@ -8,12 +8,11 @@ var bio = {
         "mobile": 18514000891,
 		"email": "gengyudonga@gmail.com",
 		"github": "luocooldong",
-		"bornYear":"1989-06",
 		"locationOrigin": "河南周口",
 		"location": "北京"
 	},
     "welcomeMessage": "学而不思则罔，思而不学则怠",
-    "skills": ["Html", "Css", "JavaScript", "jQuery", "Bootstrap", "AngularJS", "Backbrone.js", "KnockoutJs", "Ajax", "Grunt"],
+    "skills": ["Html5", "Css3", "ES6", "React", "Angular", "Vue", "Webpack", "jQuery"],
 	"bioPic": "../frontend-nanodegree-Interactive-Resume/images/dong.jpg",
 	"display": function(){
 		var formattedName = HTMLheaderName.replace("%data%", this.name);
@@ -30,7 +29,6 @@ var bio = {
         formattedContactInfo.push(HTMLmobile.replace("%data%", this.contacts.mobile));
         formattedContactInfo.push(HTMLemail.replace("%data%", this.contacts.email));
         formattedContactInfo.push(HTMLgithub.replace("%data%", this.contacts.github));
-		formattedContactInfo.push(HTMLBornYear.replace("%data%", this.contacts.bornYear));
 		formattedContactInfo.push(HTMLlocationOrigin.replace("%data%", this.contacts.locationOrigin));
         formattedContactInfo.push(HTMLlocation.replace("%data%", this.contacts.location));
 
@@ -207,12 +205,6 @@ var projects = {
 		"images": ["../frontend-nanodegree-Interactive-Resume/images/dainping.png"],
 		"url": "https://www.coursera.org/learn/angular-js"
 	},{
-		"title": "待办事项",
-		"dates": "4 2017",
-		"description": "待办事项是一个用BackboneJs开发的计划事项。",
-		"images": ["../frontend-nanodegree-Interactive-Resume/images/daibanshixiang.png"],
-		"url": "https://www.coursera.org/learn/angular-js"
-	},{
 		"title": "青蛙过河项目克隆",
 		"dates": "3 2017",
 		"description": "青蛙过河项目克隆。",
@@ -230,9 +222,6 @@ var projects = {
 				$(".project-entry:last").append(formattedProjectTitle,
                                           formattedProjectDates,
                                           formattedProjectDescription);
-				/*$(".project-entry:last").append(formattedProjectDates);
-				$(".project-entry:last").append(formattedProjectDescription);*/
-
 				project.images.forEach(function(image){
 					var formattedProjectImage = HTMLprojectImage.replace("%data%", image);
 					$(".project-entry:last").append(formattedProjectImage);
@@ -242,9 +231,7 @@ var projects = {
 	}
 };
 
-
 projects.display();
-
 
 /*获取鼠标坐标*/
 $(document).click(function(loc){
@@ -263,151 +250,3 @@ function inName(name) {
 }
 
 $("#main").append(internationalizeButton);
-
-
-/*技能图谱*/
-$(function () {
-    var myChartData = {
-        chart: {
-            type: 'scatter',
-            zoomType: 'xy'
-        },
-        title: {
-            text: 'Skills'
-        },
-        xAxis: {
-            title: {
-                enabled: true,
-                text: 'Used (year)'
-            },
-            startOnTick: true,
-            endOnTick: true,
-            showLastLabel: true
-        },
-        yAxis: {
-            title: {
-                text: 'Duration (months)'
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'left',
-            verticalAlign: 'top',
-            x: 250,
-            y: 0,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
-            borderWidth: 1
-        },
-        plotOptions: {
-            scatter: {
-                marker: {
-                    radius: 5,
-                    states: {
-                        hover: {
-                            enabled: true,
-                            lineColor: 'rgb(100,100,100)'
-                        }
-                    }
-                },
-                states: {
-                    hover: {
-                        marker: {
-                            enabled: false
-                        }
-                    }
-                },
-                tooltip: {
-                    headerFormat: '<b>{series.name}</b><br>',
-                    pointFormat: 'Used in {point.x} for {point.y} month(s)'
-                }
-			}
-		},
-		series: [{
-				name: 'NodeJS',
-				color: 'rgba(255, 0, 0, .5)',
-				data: [[2017, 4], [2016, 12]]
-			},
-			{
-				name: 'AngularsJS',
-				color: 'rgba(204, 0, 0, .5)',
-				data: [[2017, 4], [2016, 12], [2015, 8], [2014, 1]]
-			},
-			{
-				name: 'Bootstrap',
-				color: 'rgba(153, 51, 0, .5)',
-				data: [[2017, 4], [2016, 12], [2015, 8], [2014, 5], [2002, 3], [2008, 4], [2005, 2]]
-			},
-			{
-				name: 'ExtJS',
-				color: 'rgba(0, 153, 102, .5)',
-				data: [[2017, 4], [2016, 12], [2015, 8], [2014, 2]]
-			},
-			{
-				name: 'jQuery',
-				color: 'rgba(0, 102, 51, .5)',
-				data: [[2016, 12], [2017, 3], [2013, 12], [2012, 12], [2011, 4]]
-			},
-			{
-				name: 'Ajax',
-				color: 'rgba(119, 152, 191, .5)',
-				data: [[2016, 9], [2016, 12]]
-			},
-			{
-				name: 'JavaScript',
-				color: 'rgba(170, 162, 30, .5)',
-				data: [[2014, 7], [2016, 8]]
-			},
-			{
-				name: 'HTML/CSS',
-				color: 'rgba(0, 102, 0, .5)',
-				data: [[2013, 12], [2014, 3]]
-			},
-			{
-				name: 'Json',
-				color: 'rgba(223, 83, 83, .5)',
-				data: [[2015, 11], [2015, 12]]
-			},
-			{
-				name: 'MySQL',
-				color: 'rgba(0, 102, 0, .5)',
-				data: [[2012, 9], [2012,12]]
-			},
-			{
-				name: 'Jsp/Selvet',
-				color: 'rgba(119, 152, 80, .5)',
-				data: [[2012, 4], [2013, 8]]
-			},
-			{
-				name: 'Java',
-				color: 'rgba(204, 102, 0, .5)',
-				data: [[2012, 3]]
-			},
-			{
-				name: 'C',
-				color: 'rgba(210, 200, 0, .5)',
-				data: [[2011, 12], [2012, 1]]
-			}]
-	};
-    $("#container").highcharts(myChartData);
-});
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
